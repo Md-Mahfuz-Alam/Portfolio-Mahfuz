@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/9489a39a95.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="index.css" />
+    <title>Mahfuz Alam - Portfolio</title>
+  </head>
+
+  <body>
+    <header>
+      <section class="header-container">
+        <div class="brand-div">
+          <div class="logo-div">
+            <a class="brand" href="#">&lt;&sol;&gt;</a>
+          </div>
+          <div class="toggle-container" onclick="toggleDarkMode()">
+            <div class="toggle-button"></div>
+            <svg
+              class="toggle-icon moon-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12,18c-3.3,0-6-2.7-6-6s2.7-6,6-6s6,2.7,6,6S15.3,18,12,18zM12,8c-2.2,0-4,1.8-4,4c0,2.2,1.8,4,4,4c2.2,0,4-1.8,4-4C16,9.8,14.2,8,12,8z"
+              />
+              <path
+                d="M12,4c-0.6,0-1-0.4-1-1V1c0-0.6,0.4-1,1-1s1,0.4,1,1v2C13,3.6,12.6,4,12,4z"
+              />
+              <path
+                d="M12,24c-0.6,0-1-0.4-1-1v-2c0-0.6,0.4-1,1-1s1,0.4,1,1v2C13,23.6,12.6,24,12,24z"
+              />
+              <path
+                d="M5.6,6.6c-0.3,0-0.5-0.1-0.7-0.3L3.5,4.9c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l1.4,1.4c0.4,0.4,0.4,1,0,1.4C6.2,6.5,5.9,6.6,5.6,6.6z"
+              />
+              <path
+                d="M19.8,20.8c-0.3,0-0.5-0.1-0.7-0.3l-1.4-1.4c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l1.4,1.4c0.4,0.4,0.4,1,0,1.4C20.3,20.7,20,20.8,19.8,20.8z"
+              />
+              <path
+                d="M3,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h2c0.6,0,1,0.4,1,1S3.6,13,3,13z"
+              />
+              <path
+                d="M23,13h-2c-0.6,0-1-0.4-1-1s0.4-1,1-1h2c0.6,0,1,0.4,1,1S23.6,13,23,13z"
+              />
+              <path
+                d="M4.2,20.8c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l1.4-1.4c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-1.4,1.4C4.7,20.7,4.5,20.8,4.2,20.8z"
+              />
+              <path
+                d="M18.4,6.6c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l1.4-1.4c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-1.4,1.4C18.9,6.5,18.6,6.6,18.4,6.6z"
+              />
+            </svg>
+            <svg
+              class="toggle-icon sun-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12.1,22c-0.3,0-0.6,0-0.9,0c-5.5-0.5-9.5-5.4-9-10.9c0.4-4.8,4.2-8.6,9-9c0.4,0,0.8,0.2,1,0.5c0.2,0.3,0.2,0.8-0.1,1.1c-2,2.7-1.4,6.4,1.3,8.4c2.1,1.6,5,1.6,7.1,0c0.3-0.2,0.7-0.3,1.1-0.1c0.3,0.2,0.5,0.6,0.5,1c-0.2,2.7-1.5,5.1-3.6,6.8C16.6,21.2,14.4,22,12.1,22zM9.3,4.4c-2.9,1-5,3.6-5.2,6.8c-0.4,4.4,2.8,8.3,7.2,8.7c2.1,0.2,4.2-0.4,5.8-1.8c1.1-0.9,1.9-2.1,2.4-3.4c-2.5,0.9-5.3,0.5-7.5-1.1C9.2,11.4,8.1,7.7,9.3,4.4z"
+              />
+            </svg>
+          </div>
+        </div>
+        <input type="checkbox" id="checkbox-toggle" />
+        <label for="checkbox-toggle" class="hamburger">&#9776;</label>
+        <ul class="nav-menu">
+          <li class="nav-item"><a class="nav-link" href="#hero">About</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#experience">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#achievements">Achievements</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </section>
+    </header>
+    <main>
+      <section class="wrapper">
+        <section id="hero" class="containerize">
+          <section class="about-hero">
+            <h1 class="hero__heading">Md Mahfuz Alam</h1>
+            <div class="hero__desc-container">
+              <p class="hero__desc">Software Engineer</p>
+              <p class="hero__desc">React Developer</p>
+              <p class="hero__desc">ROR Developer</p>
+            </div>
+            <div class="socials">
+              <a
+                href="https://github.com/Md-Mahfuz-Alam"
+                class="social-icon"
+                target="_blank"
+              >
+                <i
+                  class="fa-brands fa-github"
+                  style="color: var(--foreground)"
+                ></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/md-mahfuz-alam-72b8891b3/"
+                class="social-icon"
+                target="_blank"
+              >
+                <i
+                  class="fa-brands fa-linkedin"
+                  style="color: var(--foreground)"
+                ></i>
+              </a>
+              <a
+                href="mailto:mahfuzalamdestiny@gmail.com"
+                class="social-icon"
+                target="_blank"
+              >
+                <i
+                  class="fa-brands fa-google"
+                  style="color: var(--foreground)"
+                ></i>
+              </a>
+              <a
+                href="https://www.instagram.com/m_mahfuz__/"
+                class="social-icon"
+                target="_blank"
+              >
+                <i
+                  class="fa-brands fa-instagram"
+                  style="color: var(--foreground)"
+                ></i>
+              </a>
+            </div>
+            <div class="resume">
+              <a
+                href="https://drive.google.com/file/d/1yWTiZJoYtoD1ngFDV-S3lnU3jxHf-qSb/view?usp=drive_link"
+                target="_blank"
+              >
+                Resume
+                <i
+                  class="fa-solid fa-arrow-up-right-from-square"
+                  style="color: var(--foreground)"
+                ></i>
+              </a>
+            </div>
+          </section>
+          <section class="hero_img_section">
+            <img src="./assets/hero_svg.svg" class="hero__img" alt="HERO_SVG" />
+          </section>
+        </section>
+      </section>
+      <div class="wrapper">
+        <section id="experience" class="containerize">
+          <div class="fade-in">
+            <h2 class="section-heading">Experience</h2>
+            <div class="timeline">
+              <div class="exp_content left_content">
+                <img src="./assets/kreeti_logo.png" alt="kreeti" />
+                <div class="text-box">
+                  <h3>Kreeti Technologies</h3>
+                  <h6>Software Engineer</h6>
+                  <small>Feb 2023 - Present</small>
+                  <p>
+                    My role involves actively contribution to the development
+                    and improvement of complex applications .
+                  </p>
+                  <p>
+                    Worked in a job hiring application built in ReactJs and
+                    Elixir to smoothen the interview process
+                  </p>
+                  <p>
+                    Currently engaged in the development and transformation of a
+                    shipping trade application built in Rails into an
+                    application utilizing Ruby-On-Rails, GraphQL API, and
+                    Next.js as the Frontend. This involves managing the shipping
+                    process for goods originating from diverse countries and
+                    ports.
+                  </p>
+                  <span class="left_content_arr"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="wrapper">
+        <section id="projects" class="containerize">
+          <div class="fade-in">
+            <h2 class="section-heading">Projects</h2>
+            <div class="projects">
+              <div class="card project">
+                <img
+                  src="./assets/hospital.jpeg"
+                  class="card-img-top"
+                  alt="project"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Hospital Management System</h5>
+                  <div class="tech-stack">
+                    <span class="btn custom-btn">HTML</span>
+                    <span class="btn custom-btn">CSS</span>
+                    <span class="btn custom-btn">JAVASCRIPT</span>
+                    <span class="btn custom-btn">BOOTSTRAP</span>
+                    <span class="btn custom-btn">RUBY ON RAILS</span>
+                    <span class="btn custom-btn">ELASTIC SEARCH</span>
+                    <span class="btn custom-btn">FILTER</span>
+                    <span class="btn custom-btn">ACTION MAILER</span>
+                    <span class="btn custom-btn">PDF</span>
+
+                    <span class="btn custom-btn">AUTHENTICATION</span>
+                  </div>
+                  <a
+                    href="https://github.com/Mahfuz-K/Hospital-Management-System"
+                    class="btn custom-btn link-btn"
+                  >
+                    Github
+                    <i
+                      class="fa-solid fa-arrow-up-right-from-square"
+                      style="color: var(--background)"
+                    ></i>
+                  </a>
+                </div>
+              </div>
+              <div class="card project">
+                <img
+                  src="./assets/mental_health.jpg"
+                  class="card-img-top"
+                  alt="project"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Mental Health Prediction</h5>
+                  <div class="tech-stack">
+                    <span class="btn custom-btn">PYTHON</span>
+                    <span class="btn custom-btn">BIG DATA</span>
+                    <span class="btn custom-btn">STREAMLITE</span>
+                    <span class="btn custom-btn">LOGISTIC REGRESSION</span>
+                    <span class="btn custom-btn">RANDOM FOREST CLASSIFIER</span>
+                    <span class="btn custom-btn">PICKLE</span>
+                  </div>
+                  <a
+                    href="https://github.com/Md-Mahfuz-Alam/Mental_Health_Prediction"
+                    class="btn custom-btn link-btn"
+                  >
+                    Github
+                    <i
+                      class="fa-solid fa-arrow-up-right-from-square"
+                      style="color: var(--background)"
+                    ></i>
+                  </a>
+                </div>
+              </div>
+              <div class="card project">
+                <img
+                  src="./assets/homeland.png"
+                  class="card-img-top"
+                  alt="project"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">HomeLand Real Estate</h5>
+                  <div class="tech-stack">
+                    <span class="btn custom-btn">HTML</span>
+                    <span class="btn custom-btn">CSS</span>
+                    <span class="btn custom-btn">BOOTSTRAP</span>
+                    <span class="btn custom-btn">RESPONSIVE</span>
+                    <span class="btn custom-btn">CAROUSEL</span>
+                    <span class="btn custom-btn">DYNAMIC MENU BAR</span>
+                  </div>
+                  <a
+                    href="https://md-mahfuz-alam.github.io/HomeLand-Real-Estate/"
+                    class="btn custom-btn link-btn"
+                  >
+                    Page
+                    <i
+                      class="fa-solid fa-arrow-up-right-from-square"
+                      style="color: var(--background)"
+                    ></i>
+                  </a>
+                  <a
+                    href="https://github.com/Md-Mahfuz-Alam/HomeLand-Real-Estate"
+                    class="btn custom-btn link-btn"
+                  >
+                    Github
+                    <i
+                      class="fa-solid fa-arrow-up-right-from-square"
+                      style="color: var(--background)"
+                    ></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="wrapper">
+        <section id="skills" class="containerize">
+          <div class="fade-in">
+            <h2 class="section-heading">Skills</h2>
+            <div class="skills-inner">
+              <div class="skill">
+                <img src="./assets/react-js.svg" alt="React" title="ReactJs" />
+              </div>
+
+              <div class="skill">
+                <img
+                  src="./assets/tailwind-css.svg"
+                  alt="TailwindCSS"
+                  title="Tailwind-css"
+                />
+              </div>
+              <div class="skill">
+                <img
+                  src="./assets/bootstrap.svg"
+                  alt="bootstrap"
+                  title="Bootstrap"
+                />
+              </div>
+              <div class="skill">
+                <img src="./assets/html.svg" alt="html" title="HTML5" />
+              </div>
+              <div class="skill">
+                <img src="./assets/css.svg" alt="css" title="CSS3" />
+              </div>
+              <div class="skill">
+                <img
+                  src="./assets/javascript.svg"
+                  alt="javascript"
+                  title="Javascript"
+                />
+              </div>
+              <div class="skill">
+                <img src="./assets/mysql.svg" alt="mysql" title="Mysql" />
+              </div>
+              <div class="skill">
+                <img
+                  src="./assets/postgresql.svg"
+                  alt="postgresql"
+                  title="Postgresql"
+                />
+              </div>
+
+              <div class="skill">
+                <img src="./assets/ruby.svg" alt="ruby" title="Ruby" />
+              </div>
+              <div class="skill">
+                <img
+                  src="./assets/ruby-on-rails.svg"
+                  alt="ruby-on-rails"
+                  title="Ruby on Rails"
+                />
+              </div>
+              <div class="skill">
+                <img
+                  src="./assets/GraphQL_Logo.svg.png"
+                  alt="GraphQL "
+                  title="GraphQL"
+                />
+              </div>
+              <div class="skill">
+                <img src="./assets/git.svg" alt="git" title="Git" />
+              </div>
+              <div class="skill">
+                <img src="./assets/github.svg" alt="github" title="Github" />
+              </div>
+              <div class="skill">
+                <img
+                  src="./assets/visual-studio-code.svg"
+                  alt="visual-studio-code"
+                  title="Visual Studio Code"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="wrapper">
+        <section id="achievements" class="containerize">
+          <div class="fade-in">
+            <h2 class="section-heading">Achievements</h2>
+            <div class="coding-profiles">
+              <ul>
+                <li class="coding-profile-item">
+                  <a href="#">
+                    <img
+                      class="coding-profile-img"
+                      src="assets/mental_health.jpg"
+                      alt=""
+                    />
+                    Python for Data Science from NPTEL (71 percent)
+                    <i
+                      class="fa-solid fa-arrow-up-right-from-square"
+                      style="color: var(--foreground)"
+                    ></i>
+                  </a>
+                </li>
+                <li class="coding-profile-item">
+                  <a href="https://leetcode.com/Mahfuzalam/">
+                    <img
+                      class="coding-profile-img"
+                      src="./assets/leetcode.svg"
+                      alt="leetcode"
+                    />
+                    Leetcode - 5 badges (Problems solved - 200+)
+                    <i
+                      class="fa-solid fa-arrow-up-right-from-square"
+                      style="color: var(--foreground)"
+                    ></i>
+                  </a>
+                </li>
+                <li class="coding-profile-item">
+                  <a
+                    href="https://auth.geeksforgeeks.org/user/mahfuzflamedestiny"
+                  >
+                    <img
+                      class="coding-profile-img"
+                      src="./assets/icons8-geeksforgeeks.svg"
+                      alt="geeksforgeeks"
+                    />
+                    Geeksforgeeks (Problems solved - 250+)
+                    <i
+                      class="fa-solid fa-arrow-up-right-from-square"
+                      style="color: var(--foreground)"
+                    ></i>
+                  </a>
+                </li>
+                <li class="coding-profile-item">
+                  <a href="https://www.hackerrank.com/profile/mahfuzflamedest1">
+                    <img
+                      class="coding-profile-img"
+                      src="./assets/hackerrank.svg"
+                      alt="hackerrank"
+                    />
+                    Certified Java Language By Hackerrank
+                    <i
+                      class="fa-solid fa-arrow-up-right-from-square"
+                      style="color: var(--foreground)"
+                    ></i>
+                  </a>
+                </li>
+                <li class="coding-profile-item">
+                  <a href="https://www.hackerrank.com/profile/mahfuzflamedest1">
+                    <img
+                      class="coding-profile-img"
+                      src="./assets/hackerrank.svg"
+                      alt="hackerrank"
+                    />
+                    Certified SQL By Hackerrank
+                    <i
+                      class="fa-solid fa-arrow-up-right-from-square"
+                      style="color: var(--foreground)"
+                    ></i>
+                  </a>
+                </li>
+                <li class="coding-profile-item">
+                  <a>
+                    <img class="coding-profile-img" src="#" alt="->" />
+                    Certificate of MERIT of 2nd position in Zonal Round at
+                    Autonomous Robotics , the Annual Technical Festival of IIT
+                    DELHI in 2016
+                    <i
+                      class="fa-solid fa-arrow-up-right-from-square"
+                      style="color: var(--foreground)"
+                    ></i>
+                  </a>
+                </li>
+                <li class="coding-profile-item">
+                  <a>
+                    <img class="coding-profile-img" src="#" alt="->" />
+                    Certification for completing National Voter Awareness Quiz
+                    Contest
+                    <i
+                      class="fa-solid fa-arrow-up-right-from-square"
+                      style="color: var(--foreground)"
+                    ></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="wrapper">
+        <section id="contact" class="containerize">
+          <div class="fade-in">
+            <h2 class="section-heading">Contact ME</h2>
+            <div class="socials">
+              <a
+                href="https://github.com/Md-Mahfuz-Alam"
+                class="social-icon"
+                target="_blank"
+              >
+                <i
+                  class="fa-brands fa-github"
+                  style="color: var(--foreground)"
+                ></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/md-mahfuz-alam-72b8891b3/"
+                class="social-icon"
+                target="_blank"
+              >
+                <i
+                  class="fa-brands fa-linkedin"
+                  style="color: var(--foreground)"
+                ></i>
+              </a>
+
+              <a
+                href="mailto:mahfuzalamdestiny@gmail.com"
+                class="social-icon"
+                target="_blank"
+              >
+                <i
+                  class="fa-brands fa-google"
+                  style="color: var(--foreground)"
+                ></i>
+              </a>
+              <a
+                href="https://www.instagram.com/m_mahfuz__/"
+                class="social-icon"
+                target="_blank"
+              >
+                <i
+                  class="fa-brands fa-instagram"
+                  style="color: var(--foreground)"
+                ></i>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="wrapper">
+      <section id="footer" class="containerize">
+        <div class="copyright">
+          Copyright &copy; 2023
+          <a href="#">Md Mahfuz Alam</a>
+        </div>
+      </section>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>
